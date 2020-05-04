@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
+import {useNavigation} from '@react-navigation/native';
+
 import {
   Container,
   TextQuetion,
@@ -17,6 +19,8 @@ import {
 import dataQuestion from '../../dataTemp/profileQuestions';
 
 const ProfileQuestions = () => {
+  const navigation = useNavigation();
+
   const [questions, setQuestions] = useState([]);
   const [totalQuestion, setTotalQuestion] = useState(0);
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -32,9 +36,17 @@ const ProfileQuestions = () => {
     loadQuestions();
   }, []);
 
+  function navigateToResultProfile() {
+    navigation.navigate('ResultProfile');
+  }
+
   function nextQuestion() {
     if (activeQuestion + 1 < totalQuestion) {
       setActiveQuestion(activeQuestion + 1);
+    } else {
+      // TODO: Integration with database
+      // TODO: Calculate score
+      navigateToResultProfile();
     }
   }
 

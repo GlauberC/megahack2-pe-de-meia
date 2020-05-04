@@ -35,6 +35,7 @@ export const ViewBtns = styled.View`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 80px;
 `;
 export const BtnNavigate = styled.TouchableOpacity`
   width: 120px;
@@ -50,8 +51,12 @@ export const BtnNavigateText = styled.Text`
   color: ${(props) =>
     props.submit === 'true' ? colors.textLight : colors.textDark};
 `;
-export const ViewDigital = styled.View`
+export const ViewDigital = styled.TouchableOpacity`
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   align-self: center;
+`;
+export const FingerPrint = styled.Image`
+  width: 75px;
+  height: 75px;
 `;

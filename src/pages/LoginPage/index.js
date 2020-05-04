@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {Text} from 'react-native';
+import fingerprint from '../../assets/images/fingerprint.png';
 
 import {
   Container,
@@ -13,6 +13,7 @@ import {
   BtnNavigate,
   BtnNavigateText,
   ViewDigital,
+  FingerPrint,
 } from './styles';
 
 const LoginPage = () => {
@@ -21,13 +22,21 @@ const LoginPage = () => {
   function navigateToSignUp() {
     navigation.navigate('SignUp');
   }
+  function navigateToHome() {
+    navigation.navigate('Home');
+  }
+
+  function handleSignIn() {
+    // TODO: Authenticate
+    navigateToHome();
+  }
 
   return (
     <Container>
       <Form>
         <TextIntro>Bem vindo de volta!</TextIntro>
         <Input placeholder="Email" />
-        <Input placeholder="Senha" />
+        <Input placeholder="Senha" secureTextEntry />
         <BtnForgetPassword>
           <BtnForgetPasswordText>
             Esqueceu sua senha? Clique aqui
@@ -37,13 +46,13 @@ const LoginPage = () => {
           <BtnNavigate onPress={navigateToSignUp}>
             <BtnNavigateText>Cadastre-se</BtnNavigateText>
           </BtnNavigate>
-          <BtnNavigate submit="true">
+          <BtnNavigate onPress={handleSignIn} submit="true">
             <BtnNavigateText submit="true">Entrar</BtnNavigateText>
           </BtnNavigate>
         </ViewBtns>
       </Form>
       <ViewDigital>
-        <Text>Digital</Text>
+        <FingerPrint source={fingerprint} />
       </ViewDigital>
     </Container>
   );

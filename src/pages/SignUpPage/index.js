@@ -34,8 +34,8 @@ const SignUpPage = () => {
       <Form>
         <TextIntro>Bem vindo ao clube!</TextIntro>
         <Input placeholder="Email" />
-        <Input placeholder="Senha" />
-        <Input placeholder="Confirme sua senha" />
+        <Input placeholder="Senha" secureTextEntry />
+        <Input placeholder="Confirme sua senha" secureTextEntry />
         <BtnForgetPassword onPress={navigateBackToLogin}>
           <BtnForgetPasswordText>
             Já é cadastrado? Clique aqui para entrar!
