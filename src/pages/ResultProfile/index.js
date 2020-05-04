@@ -4,6 +4,8 @@ import {useNavigation} from '@react-navigation/native';
 import {
   Container,
   ViewResult,
+  ViewImageResult,
+  ImageResult,
   Title,
   TextScore,
   TextCondition,
@@ -18,6 +20,8 @@ import {
   BtnNavigateText,
 } from './styles';
 
+import imgResult from '../../assets/images/ilustration-profile-result.png';
+
 const ResultProfile = () => {
   const navigation = useNavigation();
 
@@ -28,6 +32,9 @@ const ResultProfile = () => {
   return (
     <Container>
       <ViewResult>
+        <ViewImageResult>
+          <ImageResult source={imgResult} />
+        </ViewImageResult>
         <Title>Você marcou</Title>
         <TextScore>21 pontos</TextScore>
         <TextCondition>Endividado</TextCondition>

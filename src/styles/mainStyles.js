@@ -18,4 +18,6 @@ export const colors = {
   textLight: '#FFFFFF',
   textDark: '#264653',
   textLightDark: '#9DACB2',
+  textGain: '#66D83D',
+  textLost: '#E55934',
 };

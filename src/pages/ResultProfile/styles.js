@@ -11,6 +11,12 @@ export const ViewResult = styled.View`
   justify-content: center;
   align-items: center;
 `;
+export const ViewImageResult = styled.View``;
+export const ImageResult = styled.Image`
+  width: 250px;
+  height: 230px;
+`;
+
 export const Title = styled.Text`
   font-size: 22px;
   color: ${colors.textLight};
