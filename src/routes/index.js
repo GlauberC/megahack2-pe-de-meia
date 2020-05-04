@@ -6,6 +6,8 @@ import LoginPage from '../pages/LoginPage';
 import SignUpPage from '../pages/SignUpPage';
 import ProfileQuestions from '../pages/ProfileQuestions';
 
+import {headerOptions} from './headerOptions';
+
 const Stack = createStackNavigator();
 
 function Routes() {
@@ -25,7 +27,7 @@ function Routes() {
         <Stack.Screen
           name="ProfileQuestions"
           component={ProfileQuestions}
-          // options={}
+          options={headerOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>

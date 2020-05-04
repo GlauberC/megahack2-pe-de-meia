@@ -5,7 +5,7 @@ export const colors = {
   // blocks
   blockLight: '#FFFFFF',
   blockSubmit: '#88D5D1',
-  blockBar: '##66D83D',
+  blockBar: '#66D83D',
 
   // Text
   textLight: '#FFFFFF',
